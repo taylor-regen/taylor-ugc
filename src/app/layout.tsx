@@ -15,9 +15,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Taylor UGC — Tech & App Brands",
+  title: "Taylor UGC — Tech and App Brands",
   description:
-    "I help tech & app brands convert viewers into users with short-form UGC.",
+    "I help tech and app brands convert viewers into users with short-form UGC.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -4,7 +4,7 @@ export const navItems = [
   { id: "contact", label: "Contact" },
 ] as const;
 
-export const niches = ["Tech & SaaS", "Hardware", "AI tools"] as const;
+export const niches = ["Tech", "SaaS", "AI", "Software"] as const;
 
 export const workCategories = [
   {

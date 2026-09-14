@@ -14,14 +14,14 @@ export function PortfolioPage() {
       <section className="grid items-center gap-10 pb-20 md:grid-cols-2 md:gap-12 md:pb-28">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal">
-            UGC creator & content specialist
+            UGC creator
           </p>
           <h1 className="mt-4 max-w-xl font-display text-4xl leading-[1.05] tracking-tight text-navy md:text-5xl lg:text-[3.25rem]">
-            I help tech &amp; app brands convert viewers into users.
+            I help tech and app brands convert viewers into users.
           </h1>
           <p className="mt-5 max-w-md text-base leading-relaxed text-text-muted md:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short-form for tech,
-            SaaS, and product brands — clean demos, clear hooks, easy to ship.
+            Authentic short-form videos that make complex digital products easy to
+            understand.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2">
@@ -62,18 +62,27 @@ export function PortfolioPage() {
           </div>
         </div>
 
-        {/* Stacked video hero */}
-        <div className="relative mx-auto h-[420px] w-full max-w-[340px] md:mx-0 md:ml-auto md:h-[480px] md:max-w-[380px]">
-          <div className="absolute left-0 top-10 h-[78%] w-[72%] -rotate-6 rounded-[28px] bg-gradient-to-br from-[#94a3b8] to-[#64748b] opacity-50 shadow-lg" />
-          <div className="absolute left-6 top-4 h-[82%] w-[76%] -rotate-3 rounded-[28px] bg-gradient-to-br from-navy-soft to-teal opacity-70 shadow-xl" />
-          <div className="absolute bottom-0 right-0 h-[88%] w-[82%] overflow-hidden rounded-[28px] bg-gradient-to-br from-navy via-navy-soft to-teal shadow-2xl">
+        {/* Centered front video with left/right slant cards */}
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-[360px] md:mx-0 md:ml-auto md:max-w-[400px]">
+          {/* Left slant */}
+          <div
+            aria-hidden
+            className="absolute left-[2%] top-[10%] z-0 h-[78%] w-[58%] -rotate-[8deg] rounded-[28px] bg-gradient-to-br from-[#c5d0dc] to-[#9aadc0] shadow-[0_18px_40px_-20px_rgba(11,31,58,0.35)]"
+          />
+          {/* Right slant */}
+          <div
+            aria-hidden
+            className="absolute right-[2%] top-[10%] z-0 h-[78%] w-[58%] rotate-[8deg] rounded-[28px] bg-gradient-to-br from-navy-soft/80 to-teal/70 shadow-[0_18px_40px_-20px_rgba(11,31,58,0.4)]"
+          />
+          {/* Front center */}
+          <div className="absolute left-1/2 top-[4%] z-10 h-[90%] w-[68%] -translate-x-1/2 overflow-hidden rounded-[28px] bg-gradient-to-br from-navy via-navy-soft to-teal shadow-[0_28px_50px_-18px_rgba(11,31,58,0.55)]">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.2),transparent_45%)]" />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="inline-flex size-14 items-center justify-center rounded-full bg-white/95 text-navy shadow-lg">
                 <Play className="size-5 fill-current" />
               </span>
             </div>
-            <p className="absolute bottom-8 left-6 right-6 font-display text-2xl leading-tight text-white md:text-3xl">
+            <p className="absolute bottom-8 left-5 right-5 font-display text-2xl leading-tight text-white md:text-[1.65rem]">
               How I edit
               <br />
               tech product clips
@@ -140,9 +149,8 @@ export function PortfolioPage() {
             Built for tech brands
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-muted md:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Clean framing, natural delivery,
-            and hooks that make product stories feel human.
+            I&apos;ve spent 8 years in marketing and now run my own marketing agency. I
+            understand what makes audiences stop scrolling and take action.
           </p>
         </div>
       </section>
