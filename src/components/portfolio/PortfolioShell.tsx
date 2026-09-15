@@ -21,7 +21,7 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
           className="px-4 pt-5 md:px-8 md:pt-7"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 45%, rgba(255,255,255,0.4) 72%, rgba(255,255,255,0.12) 88%, rgba(255,255,255,0) 100%)",
+              "linear-gradient(to bottom, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 35%, rgba(255,255,255,0.55) 58%, rgba(255,255,255,0.22) 78%, rgba(255,255,255,0) 100%)",
           }}
         >
           <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4 pb-3">
@@ -87,8 +87,8 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
             </div>
           )}
 
-          {/* Extra soft dissolve just under the menu */}
-          <div className="h-8 md:h-9" aria-hidden />
+          {/* Extra soft dissolve — drop the fade lower under the menu */}
+          <div className="h-16 md:h-20" aria-hidden />
         </div>
       </div>
 
