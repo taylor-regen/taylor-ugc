@@ -170,22 +170,26 @@ export function PortfolioPage() {
                   />
                 </div>
 
-                <div className="absolute -left-20 top-8 hidden w-32 text-teal sm:block md:-left-24">
-                  <p className="mb-1 -rotate-6 font-pen text-2xl leading-none">
+                <div className="absolute -left-24 top-6 hidden w-28 text-teal sm:block md:-left-28">
+                  <p className="mb-1 -rotate-6 font-pen text-2xl leading-[0.95]">
                     <span className="relative inline-block">
-                      Taylor Ashley
+                      Taylor
+                      <br />
+                      Ashley
                       <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
                     </span>
                   </p>
-                  <PenArrow className="ml-10 h-14 w-20 rotate-[25deg]" />
+                  <PenArrow className="ml-8 h-14 w-20 rotate-[25deg]" />
                 </div>
               </div>
             </div>
 
             <div className="mt-5 text-teal sm:hidden">
-              <p className="font-pen text-3xl leading-none">
+              <p className="font-pen text-3xl leading-[0.95]">
                 <span className="relative inline-block">
-                  Taylor Ashley
+                  Taylor
+                  <br />
+                  Ashley
                   <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
                 </span>
               </p>
