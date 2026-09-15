@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Play } from "lucide-react";
 import { niches, workCategories } from "@/lib/content";
+import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
 import {
   PenArrow,
   PenEnvelope,
@@ -81,19 +82,7 @@ export function PortfolioPage() {
             aria-hidden
             className="absolute right-[2%] top-[10%] z-0 h-[78%] w-[58%] rotate-[8deg] rounded-[28px] bg-gradient-to-br from-navy-soft/80 to-teal/70 shadow-[0_18px_40px_-20px_rgba(11,31,58,0.4)]"
           />
-          <div className="absolute left-1/2 top-[4%] z-10 h-[90%] w-[68%] -translate-x-1/2 overflow-hidden rounded-[28px] bg-gradient-to-br from-navy via-navy-soft to-teal shadow-[0_28px_50px_-18px_rgba(11,31,58,0.55)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.2),transparent_45%)]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="inline-flex size-14 items-center justify-center rounded-full bg-white/95 text-navy shadow-lg">
-                <Play className="size-5 fill-current" />
-              </span>
-            </div>
-            <p className="absolute bottom-8 left-5 right-5 font-display text-2xl leading-tight text-white md:text-[1.65rem]">
-              How I edit
-              <br />
-              tech product clips
-            </p>
-          </div>
+          <HeroCoverVideo />
         </div>
       </section>
 
