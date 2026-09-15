@@ -16,7 +16,7 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#fafafa] text-navy">
       <div className="pointer-events-none fixed inset-x-0 top-0 z-40">
-        <div className="bg-gradient-to-b from-white from-40% via-white/95 to-transparent px-4 pb-12 pt-5 md:px-8 md:pb-16 md:pt-7">
+        <div className="bg-[linear-gradient(to_bottom,rgb(255_255_255)_0%,rgb(255_255_255)_42%,rgb(255_255_255/0)_100%)] px-4 pb-14 pt-5 md:px-8 md:pb-20 md:pt-7">
           <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4">
             <nav className="hidden items-center gap-8 md:flex">
               {navItems.map((item) => (
