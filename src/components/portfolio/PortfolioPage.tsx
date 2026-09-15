@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { Play } from "lucide-react";
 import { niches, workCategories } from "@/lib/content";
 import {
   PenArrow,
-  PenCircle,
   PenHeart,
   PenStar,
   PenUnderline,
@@ -19,11 +19,11 @@ export function PortfolioPage() {
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-24 md:px-6 md:pt-28">
       {/* Hero */}
       <section className="relative grid items-center gap-10 pb-20 md:grid-cols-2 md:gap-12 md:pb-28">
-        <PenStar className="absolute -left-1 top-8 hidden size-7 text-ink/70 md:block" />
-        <PenHeart className="absolute bottom-24 left-[46%] hidden size-6 text-ink/60 md:block" />
+        <PenStar className="absolute -left-1 top-8 hidden size-7 text-teal/70 md:block" />
+        <PenHeart className="absolute bottom-24 left-[46%] hidden size-6 text-teal/60 md:block" />
 
         <div>
-          <p className="font-pen text-2xl text-ink md:text-[1.7rem]">UGC creator</p>
+          <p className="font-pen text-2xl text-teal md:text-[1.7rem]">UGC creator</p>
           <h1 className="mt-3 max-w-xl font-display text-4xl leading-[1.05] tracking-tight text-navy md:text-5xl lg:text-[3.25rem]">
             I help tech and app brands convert viewers into users.
           </h1>
@@ -50,10 +50,10 @@ export function PortfolioPage() {
                 e.preventDefault();
                 scrollTo("contact");
               }}
-              className="relative inline-flex px-5 py-2 font-pen text-3xl text-ink transition hover:opacity-80"
+              className="relative inline-flex px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
             >
               work with me
-              <PenCircle className="pointer-events-none absolute -inset-x-2 -inset-y-1 text-ink" />
+              <PenUnderline className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-3 w-full text-teal" />
             </a>
             <a
               href="#work"
@@ -61,7 +61,7 @@ export function PortfolioPage() {
                 e.preventDefault();
                 scrollTo("work");
               }}
-              className="text-sm font-medium text-navy underline decoration-ink/40 underline-offset-4 transition hover:text-ink"
+              className="text-sm font-medium text-navy underline decoration-teal/40 underline-offset-4 transition hover:text-teal"
             >
               See my work
             </a>
@@ -69,8 +69,8 @@ export function PortfolioPage() {
         </div>
 
         <div className="relative mx-auto aspect-[4/5] w-full max-w-[360px] md:mx-0 md:ml-auto md:max-w-[400px]">
-          <PenStar className="absolute -right-3 top-6 z-20 size-6 rotate-12 text-ink md:size-7" />
-          <PenHeart className="absolute -left-2 bottom-16 z-20 size-5 -rotate-12 text-ink/80 md:size-6" />
+          <PenStar className="absolute -right-3 top-6 z-20 size-6 rotate-12 text-teal md:size-7" />
+          <PenHeart className="absolute -left-2 bottom-16 z-20 size-5 -rotate-12 text-teal/80 md:size-6" />
 
           <div
             aria-hidden
@@ -99,9 +99,9 @@ export function PortfolioPage() {
       {/* Work */}
       <section id="work" className="scroll-mt-28 pb-20 md:pb-28">
         <div className="relative mb-12 text-center">
-          <PenStar className="absolute left-[18%] top-0 size-5 text-ink/50" />
-          <PenHeart className="absolute right-[20%] top-2 size-5 text-ink/50" />
-          <p className="font-pen text-2xl text-ink">work</p>
+          <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />
+          <PenHeart className="absolute right-[20%] top-2 size-5 text-teal/50" />
+          <p className="font-pen text-2xl text-teal">work</p>
           <h2 className="mt-2 font-display text-3xl tracking-tight text-navy md:text-4xl">
             Short-form that actually performs.
           </h2>
@@ -115,7 +115,7 @@ export function PortfolioPage() {
             <div key={category.name}>
               <div className="mb-5 flex items-baseline gap-2">
                 <h3 className="text-xl font-semibold text-navy">{category.name}</h3>
-                <span className="font-pen text-xl text-ink">{category.count}</span>
+                <span className="font-pen text-xl text-teal">{category.count}</span>
               </div>
               <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
                 {category.items.map((item) => (
@@ -147,46 +147,59 @@ export function PortfolioPage() {
       {/* About */}
       <section id="about" className="scroll-mt-28 pb-20 md:pb-28">
         <div className="grid items-center gap-10 md:grid-cols-[0.95fr_1.05fr] md:gap-14">
-          {/* Handwritten scrapbook side */}
           <div className="relative mx-auto w-full max-w-md md:mx-0">
-            <p className="font-pen text-[2rem] leading-none text-ink md:text-[2.35rem]">
+            <p className="font-pen text-[2rem] leading-none text-teal md:text-[2.35rem]">
               I can&apos;t wait to work with you
             </p>
 
             <div className="relative mt-6 flex justify-center">
-              <PenStar className="absolute -left-1 top-8 size-6 -rotate-12 text-ink" />
-              <PenHeart className="absolute -right-2 top-2 size-6 rotate-12 text-ink" />
-              <PenStar className="absolute bottom-4 -right-4 size-5 text-ink/70" />
-              <PenHeart className="absolute -bottom-1 left-4 size-5 -rotate-6 text-ink/70" />
+              <PenStar className="absolute -left-1 top-8 size-6 -rotate-12 text-teal" />
+              <PenHeart className="absolute -right-2 top-2 size-6 rotate-12 text-teal" />
+              <PenStar className="absolute bottom-4 -right-4 size-5 text-teal/70" />
+              <PenHeart className="absolute -bottom-1 left-4 size-5 -rotate-6 text-teal/70" />
 
               <div className="relative">
-                <div className="h-56 w-44 -rotate-2 overflow-hidden rounded-sm bg-gradient-to-br from-[#d6dde6] via-[#b8c4d1] to-[#8fa0b3] shadow-[0_12px_30px_-16px_rgba(11,31,58,0.45)] ring-1 ring-black/5 md:h-64 md:w-52">
-                  <div className="flex h-full items-end justify-center bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.35),transparent_55%)] pb-4">
-                    <span className="font-pen text-lg text-navy/40">photo soon</span>
-                  </div>
+                <div className="relative h-64 w-48 -rotate-2 overflow-hidden rounded-sm shadow-[0_12px_30px_-16px_rgba(11,31,58,0.45)] ring-1 ring-black/5 md:h-72 md:w-56">
+                  <Image
+                    src="/taylor-about.jpg"
+                    alt="Taylor"
+                    fill
+                    className="object-cover object-[50%_20%]"
+                    sizes="(max-width: 768px) 192px, 224px"
+                    priority
+                  />
                 </div>
 
-                <div className="absolute -left-16 top-10 hidden w-28 rotate-[-18deg] text-ink sm:block md:-left-20">
-                  <PenArrow className="h-16 w-full rotate-90 scale-x-[-1]" />
+                <div className="absolute -left-20 top-8 hidden w-28 text-teal sm:block md:-left-24">
+                  <p className="mb-1 -rotate-6 font-pen text-2xl leading-none">
+                    Taylor,{" "}
+                    <span className="relative inline-block">
+                      English
+                      <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
+                    </span>
+                  </p>
+                  <PenArrow className="ml-8 h-14 w-20 rotate-[25deg]" />
                 </div>
               </div>
             </div>
 
-            <div className="mt-5 text-ink">
-              <p className="font-pen text-3xl leading-none md:text-[2.1rem]">
+            <div className="mt-5 text-teal sm:hidden">
+              <p className="font-pen text-3xl leading-none">
                 Taylor,{" "}
                 <span className="relative inline-block">
                   English
                   <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
                 </span>
               </p>
-              <p className="mt-3 font-pen text-xl text-ink/80">UGC · tech &amp; apps</p>
+              <p className="mt-3 font-pen text-xl text-teal/80">UGC · tech &amp; apps</p>
             </div>
+            <p className="mt-4 hidden font-pen text-xl text-teal/80 sm:block">
+              UGC · tech &amp; apps
+            </p>
           </div>
 
-          {/* About copy */}
           <div>
-            <p className="font-pen text-2xl text-ink">about me</p>
+            <p className="font-pen text-2xl text-teal">about me</p>
             <h2 className="mt-2 font-display text-3xl tracking-tight text-navy md:text-4xl">
               Built for tech brands
             </h2>
@@ -200,10 +213,10 @@ export function PortfolioPage() {
                 e.preventDefault();
                 scrollTo("contact");
               }}
-              className="relative mt-8 inline-flex px-5 py-2 font-pen text-3xl text-ink transition hover:opacity-80"
+              className="relative mt-8 inline-flex px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
             >
               work with me
-              <PenCircle className="pointer-events-none absolute -inset-x-2 -inset-y-1 text-ink" />
+              <PenUnderline className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-3 w-full text-teal" />
             </a>
           </div>
         </div>
@@ -212,10 +225,10 @@ export function PortfolioPage() {
       {/* Contact */}
       <section id="contact" className="scroll-mt-28">
         <div className="relative overflow-hidden rounded-[32px] border border-border bg-white px-6 py-12 text-center md:px-12 md:py-16">
-          <PenStar className="absolute left-8 top-8 size-6 text-ink/50" />
-          <PenHeart className="absolute right-10 top-10 size-6 text-ink/50" />
-          <PenStar className="absolute bottom-10 left-1/4 size-5 text-ink/40" />
-          <p className="font-pen text-2xl text-ink">contact</p>
+          <PenStar className="absolute left-8 top-8 size-6 text-teal/50" />
+          <PenHeart className="absolute right-10 top-10 size-6 text-teal/50" />
+          <PenStar className="absolute bottom-10 left-1/4 size-5 text-teal/40" />
+          <p className="font-pen text-2xl text-teal">contact</p>
           <h2 className="mt-3 font-display text-3xl text-navy md:text-4xl">
             Let&apos;s make something scroll-stopping
           </h2>
@@ -224,10 +237,10 @@ export function PortfolioPage() {
           </p>
           <a
             href="mailto:hello@example.com"
-            className="relative mt-8 inline-flex px-5 py-2 font-pen text-3xl text-ink transition hover:opacity-80"
+            className="relative mt-8 inline-flex px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
           >
             hello@example.com
-            <PenCircle className="pointer-events-none absolute -inset-x-3 -inset-y-1 text-ink" />
+            <PenUnderline className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-3 w-full text-teal" />
           </a>
         </div>
       </section>
