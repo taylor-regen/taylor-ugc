@@ -16,17 +16,9 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#fafafa] text-navy">
       <div className="pointer-events-none fixed inset-x-0 top-0 z-40">
-        {/* Tall soft white fade — solid at top, dissolves lower */}
-        <div
-          className="h-36 md:h-44"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,0.45) 75%, rgba(255,255,255,0.15) 88%, rgba(255,255,255,0) 100%)",
-          }}
-        />
-
-        <div className="pointer-events-auto absolute inset-x-0 top-0 px-4 pt-5 md:px-8 md:pt-7">
-          <header className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+        {/* Solid white only behind the nav, then a short soft fade (~1cm) */}
+        <div className="bg-white px-4 pt-5 md:px-8 md:pt-7">
+          <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4">
             <nav className="hidden items-center gap-8 md:flex">
               {navItems.map((item) => (
                 <button
@@ -65,7 +57,7 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
           </header>
 
           {open && (
-            <div className="mx-auto mt-3 max-w-6xl border border-border/70 bg-white/95 p-4 backdrop-blur md:hidden">
+            <div className="pointer-events-auto mx-auto mt-3 max-w-6xl border border-border/70 bg-white/95 p-4 backdrop-blur md:hidden">
               <div className="flex flex-col gap-1">
                 {navItems.map((item) => (
                   <button
@@ -88,6 +80,15 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
               </div>
             </div>
           )}
+
+          {/* Short soft dissolve right under the menu */}
+          <div
+            className="-mx-4 h-10 md:-mx-8 md:h-11"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0) 100%)",
+            }}
+          />
         </div>
       </div>
 
