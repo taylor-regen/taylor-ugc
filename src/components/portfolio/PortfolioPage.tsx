@@ -242,11 +242,11 @@ export function PortfolioPage() {
             timeline and target goals.
           </p>
           <a
-            href="mailto:taylor@hotmail.co.uk"
+            href="mailto:taylorashley1@hotmail.co.uk"
             className="relative mt-8 inline-flex items-center gap-3 px-1 pb-2 font-pen text-2xl text-teal transition hover:opacity-80"
           >
             <PenEnvelope className="size-8 shrink-0 text-teal" />
-            taylor@hotmail.co.uk
+            taylorashley1@hotmail.co.uk
             <PenUnderline className="pointer-events-none absolute inset-x-10 -bottom-0.5 h-3 text-teal" />
           </a>
         </div>
