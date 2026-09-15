@@ -16,8 +16,17 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#fafafa] text-navy">
       <div className="pointer-events-none fixed inset-x-0 top-0 z-40">
-        <div className="bg-[linear-gradient(to_bottom,rgb(255_255_255)_0%,rgb(255_255_255)_42%,rgb(255_255_255/0)_100%)] px-4 pb-14 pt-5 md:px-8 md:pb-20 md:pt-7">
-          <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4">
+        {/* Tall soft white fade — solid at top, dissolves lower */}
+        <div
+          className="h-36 md:h-44"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,0.45) 75%, rgba(255,255,255,0.15) 88%, rgba(255,255,255,0) 100%)",
+          }}
+        />
+
+        <div className="pointer-events-auto absolute inset-x-0 top-0 px-4 pt-5 md:px-8 md:pt-7">
+          <header className="mx-auto flex max-w-6xl items-center justify-between gap-4">
             <nav className="hidden items-center gap-8 md:flex">
               {navItems.map((item) => (
                 <button
@@ -38,10 +47,10 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
                   e.preventDefault();
                   goTo("contact");
                 }}
-                className="relative hidden px-3 py-1.5 font-pen text-2xl leading-none text-teal transition hover:opacity-80 sm:inline-flex"
+                className="relative hidden px-6 py-2 font-pen text-2xl leading-none text-teal transition hover:opacity-80 sm:inline-flex"
               >
                 work with me
-                <PenCircle className="pointer-events-none absolute -inset-x-1 -inset-y-0.5 text-teal" />
+                <PenCircle className="pointer-events-none absolute -inset-x-2 -inset-y-1 text-teal" />
               </a>
 
               <button
@@ -56,7 +65,7 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
           </header>
 
           {open && (
-            <div className="pointer-events-auto mx-auto mt-3 max-w-6xl border border-border/70 bg-white/95 p-4 backdrop-blur md:hidden">
+            <div className="mx-auto mt-3 max-w-6xl border border-border/70 bg-white/95 p-4 backdrop-blur md:hidden">
               <div className="flex flex-col gap-1">
                 {navItems.map((item) => (
                   <button
@@ -71,10 +80,10 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
                 <button
                   type="button"
                   onClick={() => goTo("contact")}
-                  className="relative mt-2 self-start px-3 py-1.5 font-pen text-2xl leading-none text-teal"
+                  className="relative mt-2 self-start px-6 py-2 font-pen text-2xl leading-none text-teal"
                 >
                   work with me
-                  <PenCircle className="pointer-events-none absolute -inset-x-1 -inset-y-0.5 text-teal" />
+                  <PenCircle className="pointer-events-none absolute -inset-x-2 -inset-y-1 text-teal" />
                 </button>
               </div>
             </div>

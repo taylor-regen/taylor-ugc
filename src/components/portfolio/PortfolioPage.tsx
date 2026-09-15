@@ -153,7 +153,6 @@ export function PortfolioPage() {
             </p>
 
             <div className="relative mt-6 flex justify-center">
-              <PenStar className="absolute -left-1 top-8 size-6 -rotate-12 text-teal" />
               <PenHeart className="absolute -right-2 top-2 size-6 rotate-12 text-teal" />
               <PenStar className="absolute bottom-4 -right-4 size-5 text-teal/70" />
               <PenHeart className="absolute -bottom-1 left-4 size-5 -rotate-6 text-teal/70" />
@@ -170,13 +169,14 @@ export function PortfolioPage() {
                   />
                 </div>
 
-                <div className="absolute -left-24 top-6 hidden w-28 text-teal sm:block md:-left-28">
+                <div className="absolute -left-28 top-6 hidden text-teal sm:block md:-left-32">
                   <p className="mb-1 -rotate-6 font-pen text-2xl leading-[0.95]">
-                    <span className="relative inline-block">
+                    <span className="relative inline-block pr-5">
                       Taylor
                       <br />
                       Ashley
-                      <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
+                      <PenUnderline className="absolute -bottom-1 left-0 h-3 w-[85%]" />
+                      <PenStar className="absolute -right-1 top-0 size-5 rotate-12 text-teal" />
                     </span>
                   </p>
                   <PenArrow className="ml-8 h-14 w-20 rotate-[25deg]" />
@@ -186,11 +186,12 @@ export function PortfolioPage() {
 
             <div className="mt-5 text-teal sm:hidden">
               <p className="font-pen text-3xl leading-[0.95]">
-                <span className="relative inline-block">
+                <span className="relative inline-block pr-6">
                   Taylor
                   <br />
                   Ashley
-                  <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
+                  <PenUnderline className="absolute -bottom-1 left-0 h-3 w-[85%]" />
+                  <PenStar className="absolute -right-0 top-0 size-5 rotate-12 text-teal" />
                 </span>
               </p>
               <p className="mt-3 font-pen text-xl leading-snug text-teal/80">

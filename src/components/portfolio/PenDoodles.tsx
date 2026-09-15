@@ -1,28 +1,24 @@
 export function PenCircle({ className = "" }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 160 56"
+      viewBox="0 0 220 64"
       fill="none"
       aria-hidden
       className={className}
       preserveAspectRatio="none"
     >
-      {/* Open, imperfect oval — ends don't meet */}
+      {/* Wider open oval with room around the text — ends don't meet */}
       <path
-        d="M28 38c-6-8-2-22 18-28 16-5 48-7 72-2 18 4 28 14 26 26-2 14-20 18-52 18-22 0-42-2-52-8"
+        d="M14 34c1-16 22-26 96-27 74-1 98 10 100 27 2 16-22 24-96 25S12 50 14 34"
         stroke="currentColor"
-        strokeWidth="1.35"
+        strokeWidth="1.25"
         strokeLinecap="round"
         strokeLinejoin="round"
         vectorEffect="non-scaling-stroke"
         opacity="0.95"
-      />
-      <path
-        d="M34 40c4 3 18 5 34 5"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-        opacity="0.35"
+        pathLength="100"
+        strokeDasharray="88 20"
+        strokeDashoffset="4"
       />
     </svg>
   );
