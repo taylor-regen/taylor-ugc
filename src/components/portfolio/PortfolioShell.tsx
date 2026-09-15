@@ -38,7 +38,7 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
                   e.preventDefault();
                   goTo("contact");
                 }}
-                className="relative hidden px-5 py-2 font-pen text-2xl text-teal transition hover:opacity-80 sm:inline-flex"
+                className="relative hidden px-3 py-1.5 font-pen text-2xl leading-none text-teal transition hover:opacity-80 sm:inline-flex"
               >
                 work with me
                 <PenCircle className="pointer-events-none absolute -inset-x-1 -inset-y-0.5 text-teal" />
@@ -71,7 +71,7 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
                 <button
                   type="button"
                   onClick={() => goTo("contact")}
-                  className="relative mt-2 self-start px-4 py-2 font-pen text-2xl text-teal"
+                  className="relative mt-2 self-start px-3 py-1.5 font-pen text-2xl leading-none text-teal"
                 >
                   work with me
                   <PenCircle className="pointer-events-none absolute -inset-x-1 -inset-y-0.5 text-teal" />

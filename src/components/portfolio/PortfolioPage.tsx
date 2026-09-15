@@ -51,7 +51,7 @@ export function PortfolioPage() {
                 e.preventDefault();
                 scrollTo("contact");
               }}
-              className="relative inline-flex px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
+              className="relative inline-flex px-1 pb-2 font-pen text-2xl text-teal transition hover:opacity-80"
             >
               work with me
               <PenUnderline className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-3 w-full text-teal" />
@@ -116,7 +116,6 @@ export function PortfolioPage() {
             <div key={category.name}>
               <div className="mb-5 flex items-baseline gap-2">
                 <h3 className="text-xl font-semibold text-navy">{category.name}</h3>
-                <span className="font-pen text-xl text-teal">{category.count}</span>
               </div>
               <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
                 {category.items.map((item) => (
@@ -215,7 +214,7 @@ export function PortfolioPage() {
                 e.preventDefault();
                 scrollTo("contact");
               }}
-              className="relative mt-8 inline-flex px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
+              className="relative mt-8 inline-flex px-1 pb-2 font-pen text-2xl text-teal transition hover:opacity-80"
             >
               work with me
               <PenUnderline className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-3 w-full text-teal" />
@@ -240,7 +239,7 @@ export function PortfolioPage() {
           </p>
           <a
             href="mailto:taylor@hotmail.co.uk"
-            className="relative mt-8 inline-flex items-center gap-3 px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
+            className="relative mt-8 inline-flex items-center gap-3 px-1 pb-2 font-pen text-2xl text-teal transition hover:opacity-80"
           >
             <PenEnvelope className="size-8 shrink-0 text-teal" />
             taylor@hotmail.co.uk
