@@ -5,6 +5,7 @@ import { Play } from "lucide-react";
 import { niches, workCategories } from "@/lib/content";
 import {
   PenArrow,
+  PenEnvelope,
   PenHeart,
   PenStar,
   PenUnderline,
@@ -101,12 +102,12 @@ export function PortfolioPage() {
         <div className="relative mb-12 text-center">
           <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />
           <PenHeart className="absolute right-[20%] top-2 size-5 text-teal/50" />
-          <p className="font-pen text-2xl text-teal">work</p>
+          <p className="font-pen text-2xl text-teal">UGC work</p>
           <h2 className="mt-2 font-display text-3xl tracking-tight text-navy md:text-4xl">
             Short-form that actually performs.
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
-            Content creation and canvas UGC for tech brands.
+            Recent content creation and Canvas UGC.
           </p>
         </div>
 
@@ -162,7 +163,7 @@ export function PortfolioPage() {
                 <div className="relative h-64 w-48 -rotate-2 overflow-hidden rounded-sm shadow-[0_12px_30px_-16px_rgba(11,31,58,0.45)] ring-1 ring-black/5 md:h-72 md:w-56">
                   <Image
                     src="/taylor-about.jpg"
-                    alt="Taylor"
+                    alt="Taylor Ashley"
                     fill
                     className="object-cover object-[50%_20%]"
                     sizes="(max-width: 768px) 192px, 224px"
@@ -170,42 +171,43 @@ export function PortfolioPage() {
                   />
                 </div>
 
-                <div className="absolute -left-20 top-8 hidden w-28 text-teal sm:block md:-left-24">
+                <div className="absolute -left-20 top-8 hidden w-32 text-teal sm:block md:-left-24">
                   <p className="mb-1 -rotate-6 font-pen text-2xl leading-none">
-                    Taylor,{" "}
                     <span className="relative inline-block">
-                      English
+                      Taylor Ashley
                       <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
                     </span>
                   </p>
-                  <PenArrow className="ml-8 h-14 w-20 rotate-[25deg]" />
+                  <PenArrow className="ml-10 h-14 w-20 rotate-[25deg]" />
                 </div>
               </div>
             </div>
 
             <div className="mt-5 text-teal sm:hidden">
               <p className="font-pen text-3xl leading-none">
-                Taylor,{" "}
                 <span className="relative inline-block">
-                  English
+                  Taylor Ashley
                   <PenUnderline className="absolute -bottom-1 left-0 h-3 w-full" />
                 </span>
               </p>
-              <p className="mt-3 font-pen text-xl text-teal/80">UGC · tech &amp; apps</p>
+              <p className="mt-3 font-pen text-xl leading-snug text-teal/80">
+                B2B/B2C SaaS, AI tools, mobile apps, and digital software.
+              </p>
             </div>
-            <p className="mt-4 hidden font-pen text-xl text-teal/80 sm:block">
-              UGC · tech &amp; apps
+            <p className="mt-4 hidden max-w-xs font-pen text-xl leading-snug text-teal/80 sm:block">
+              B2B/B2C SaaS, AI tools, mobile apps, and digital software.
             </p>
           </div>
 
           <div>
             <p className="font-pen text-2xl text-teal">about me</p>
-            <h2 className="mt-2 font-display text-3xl tracking-tight text-navy md:text-4xl">
-              Built for tech brands
+            <h2 className="mt-2 max-w-xl font-display text-3xl tracking-tight text-navy md:text-4xl">
+              8+ years in marketing strategy, now creating content for modern tech brands.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-text-muted md:text-lg">
-              I&apos;ve spent 8 years in marketing and now run my own marketing agency. I
-              understand what makes audiences stop scrolling and take action.
+              I&apos;ve spent over 8 years working in marketing and running my own agency. I
+              know how performance marketing works, what hooks capture attention, and why
+              traditional ads fail to convert.
             </p>
             <a
               href="#contact"
@@ -228,19 +230,21 @@ export function PortfolioPage() {
           <PenStar className="absolute left-8 top-8 size-6 text-teal/50" />
           <PenHeart className="absolute right-10 top-10 size-6 text-teal/50" />
           <PenStar className="absolute bottom-10 left-1/4 size-5 text-teal/40" />
-          <p className="font-pen text-2xl text-teal">contact</p>
+          <p className="font-pen text-2xl text-teal">contact me</p>
           <h2 className="mt-3 font-display text-3xl text-navy md:text-4xl">
-            Let&apos;s make something scroll-stopping
+            Let&apos;s create high-converting content
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-text-muted md:text-base">
-            Tell me about the product and timeline.
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-text-muted md:text-base">
+            Have an app, SaaS, or AI tool launch coming up? Drop me an email with your
+            timeline and target goals.
           </p>
           <a
-            href="mailto:hello@example.com"
-            className="relative mt-8 inline-flex px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
+            href="mailto:taylor@hotmail.co.uk"
+            className="relative mt-8 inline-flex items-center gap-3 px-1 pb-2 font-pen text-3xl text-teal transition hover:opacity-80"
           >
-            hello@example.com
-            <PenUnderline className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-3 w-full text-teal" />
+            <PenEnvelope className="size-8 shrink-0 text-teal" />
+            taylor@hotmail.co.uk
+            <PenUnderline className="pointer-events-none absolute inset-x-10 -bottom-0.5 h-3 text-teal" />
           </a>
         </div>
       </section>

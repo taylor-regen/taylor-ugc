@@ -99,3 +99,31 @@ export function PenUnderline({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+export function PenEnvelope({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 36 28" fill="none" aria-hidden className={className}>
+      <path
+        d="M4 6.5c1-1.5 4-2.5 14-2.5s13.5 1 14.5 2.8c.8 1.4.8 12.2 0 13.8C31.5 22.5 28 24 18 24S5 22.2 4 20.5c-.9-1.5-.8-12.2 0-14Z"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.5 8.5c4 4 8.5 7.2 12.5 7.2s8-3 12.2-7"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6 20.5c3.5-3 7-5.2 12-5.2s8.2 2 11.5 5"
+        stroke="currentColor"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+        opacity="0.55"
+      />
+    </svg>
+  );
+}
