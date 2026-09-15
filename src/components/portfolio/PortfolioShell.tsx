@@ -16,9 +16,15 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#fafafa] text-navy">
       <div className="pointer-events-none fixed inset-x-0 top-0 z-40">
-        {/* Solid white only behind the nav, then a short soft fade (~1cm) */}
-        <div className="bg-white px-4 pt-5 md:px-8 md:pt-7">
-          <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4">
+        {/* Soft gradient wash — no solid white block */}
+        <div
+          className="px-4 pt-5 md:px-8 md:pt-7"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 45%, rgba(255,255,255,0.4) 72%, rgba(255,255,255,0.12) 88%, rgba(255,255,255,0) 100%)",
+          }}
+        >
+          <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4 pb-3">
             <nav className="hidden items-center gap-8 md:flex">
               {navItems.map((item) => (
                 <button
@@ -81,14 +87,8 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
             </div>
           )}
 
-          {/* Short soft dissolve right under the menu */}
-          <div
-            className="-mx-4 h-10 md:-mx-8 md:h-11"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0) 100%)",
-            }}
-          />
+          {/* Extra soft dissolve just under the menu */}
+          <div className="h-8 md:h-9" aria-hidden />
         </div>
       </div>
 
