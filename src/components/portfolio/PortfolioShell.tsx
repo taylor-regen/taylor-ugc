@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navItems } from "@/lib/content";
+import { PenCircle } from "@/components/portfolio/PenDoodles";
 
 export function PortfolioShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -13,50 +14,38 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#f7f8fa] text-navy">
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 px-4 pt-4 md:px-6 md:pt-5">
-        <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full bg-[#14171c] px-3 py-2.5 shadow-[0_12px_40px_-18px_rgba(0,0,0,0.55)] md:px-4">
-          <a
-            href="#top"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="flex items-center gap-2.5 pl-1"
-          >
-            <span className="inline-flex size-8 items-center justify-center rounded-full bg-teal text-sm font-bold text-white">
-              T
-            </span>
-            <span className="text-sm font-semibold text-white">Taylor</span>
-          </a>
-
-          <nav className="hidden items-center gap-7 md:flex">
+    <div className="min-h-screen bg-[#fafafa] text-navy">
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 px-4 pt-5 md:px-8 md:pt-7">
+        <header className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4">
+          <nav className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => goTo(item.id)}
-                className="text-sm text-white/70 transition hover:text-white"
+                className="text-[13px] lowercase tracking-wide text-navy/70 transition hover:text-ink"
               >
-                {item.label}
+                {item.label.toLowerCase()}
               </button>
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="ml-auto flex items-center gap-2">
             <a
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
                 goTo("contact");
               }}
-              className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#14171c] transition hover:bg-teal-soft sm:inline-flex"
+              className="relative hidden px-5 py-2 font-pen text-2xl text-ink transition hover:opacity-80 sm:inline-flex"
             >
-              Work with me
+              work with me
+              <PenCircle className="pointer-events-none absolute -inset-x-1 -inset-y-0.5 text-ink" />
             </a>
+
             <button
               type="button"
-              className="inline-flex size-9 items-center justify-center rounded-full text-white md:hidden"
+              className="inline-flex size-10 items-center justify-center text-navy md:hidden"
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
             >
@@ -66,24 +55,25 @@ export function PortfolioShell({ children }: { children: React.ReactNode }) {
         </header>
 
         {open && (
-          <div className="pointer-events-auto mx-auto mt-2 max-w-6xl overflow-hidden rounded-3xl bg-[#14171c] p-3 md:hidden">
+          <div className="pointer-events-auto mx-auto mt-3 max-w-6xl border border-border/70 bg-white/95 p-4 backdrop-blur md:hidden">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => goTo(item.id)}
-                  className="rounded-2xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/5 hover:text-white"
+                  className="rounded-xl px-3 py-2.5 text-left text-sm lowercase text-navy/80 hover:bg-bg-muted"
                 >
-                  {item.label}
+                  {item.label.toLowerCase()}
                 </button>
               ))}
               <button
                 type="button"
                 onClick={() => goTo("contact")}
-                className="mt-1 rounded-full bg-white px-4 py-3 text-sm font-semibold text-[#14171c]"
+                className="relative mt-2 self-start px-4 py-2 font-pen text-2xl text-ink"
               >
-                Work with me
+                work with me
+                <PenCircle className="pointer-events-none absolute -inset-x-1 -inset-y-0.5 text-ink" />
               </button>
             </div>
           </div>

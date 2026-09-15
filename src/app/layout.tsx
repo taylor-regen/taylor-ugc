@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif } from "next/font/google";
+import { DM_Sans, Instrument_Serif, Reenie_Beanie } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -14,6 +14,12 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
+const reenieBeanie = Reenie_Beanie({
+  variable: "--font-reenie",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "Taylor UGC — Tech and App Brands",
   description:
@@ -24,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${instrumentSerif.variable} ${reenieBeanie.variable} h-full antialiased`}
     >
       <body className="min-h-full font-sans text-text">{children}</body>
     </html>
