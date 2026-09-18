@@ -21,7 +21,14 @@ export type WorkCategory = {
 export const workCategories: WorkCategory[] = [
   {
     name: "Canvas UGC talking video",
-    items: [],
+    items: [
+      {
+        title: "Playad",
+        platform: "CANVAS",
+        tone: "from-navy via-navy-soft to-teal",
+        src: "/work/playad.mp4",
+      },
+    ],
   },
   {
     name: "Canvas UGC expressions",
