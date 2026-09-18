@@ -109,7 +109,13 @@ export function PortfolioPage() {
                 <h3 className="text-xl font-semibold text-navy">{category.name}</h3>
               </div>
               {category.items.length > 0 ? (
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+                <div
+                  className={
+                    category.items.length < 4
+                      ? "mx-auto grid w-full max-w-3xl grid-cols-2 justify-center gap-3 sm:gap-4 md:grid-cols-3"
+                      : "grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
+                  }
+                >
                   {category.items.map((item) => (
                     <WorkVideoCard key={item.title} item={item} />
                   ))}

@@ -69,7 +69,7 @@ export function WorkVideoCard({ item }: { item: WorkItem }) {
           onClick={togglePlay}
           disabled={!item.src}
           className="absolute inset-0 z-10 flex items-center justify-center disabled:cursor-default"
-          aria-label={playing ? "Pause video" : "Play video"}
+          aria-label={playing ? `Pause ${item.title}` : `Play ${item.title}`}
         >
           {(!playing || !item.src) && (
             <span className="inline-flex size-11 items-center justify-center rounded-full bg-white/90 text-navy transition group-hover:scale-110">
@@ -83,9 +83,6 @@ export function WorkVideoCard({ item }: { item: WorkItem }) {
           )}
         </button>
       </div>
-      <p className="mt-3 line-clamp-2 text-sm font-medium leading-snug text-navy">
-        {item.title}
-      </p>
     </article>
   );
 }

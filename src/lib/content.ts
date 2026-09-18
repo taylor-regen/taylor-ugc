@@ -34,6 +34,12 @@ export const workCategories: WorkCategory[] = [
         tone: "from-teal to-navy-soft",
         src: "/work/gojiberry.mp4",
       },
+      {
+        title: "Cantina",
+        platform: "CANVAS",
+        tone: "from-[#115e59] to-navy",
+        src: "/work/cantina.mp4",
+      },
     ],
   },
   {
