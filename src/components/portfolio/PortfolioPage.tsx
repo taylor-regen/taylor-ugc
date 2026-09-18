@@ -4,6 +4,7 @@ import Image from "next/image";
 import { niches, workCategories } from "@/lib/content";
 import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
 import { WorkVideoCard } from "@/components/portfolio/WorkVideoCard";
+import { BrandLogoMarquee } from "@/components/portfolio/BrandLogoMarquee";
 import {
   PenArrow,
   PenEnvelope,
@@ -98,6 +99,7 @@ export function PortfolioPage() {
           <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
             Talking videos and expression clips for Meta Canvas ads.
           </p>
+          <BrandLogoMarquee />
         </div>
 
         <div className="flex flex-col gap-14">
