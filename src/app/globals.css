@@ -80,7 +80,7 @@ body {
 }
 
 .logo-marquee {
-  animation: logo-marquee 32s linear infinite;
+  animation: logo-marquee 28s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
