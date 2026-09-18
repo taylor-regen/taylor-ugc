@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Play } from "lucide-react";
 import { niches, workCategories } from "@/lib/content";
 import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
+import { WorkVideoCard } from "@/components/portfolio/WorkVideoCard";
 import {
   PenArrow,
   PenEnvelope,
@@ -91,12 +91,12 @@ export function PortfolioPage() {
         <div className="relative mb-12 text-center">
           <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />
           <PenHeart className="absolute right-[20%] top-2 size-5 text-teal/50" />
-          <p className="font-pen text-2xl text-teal">UGC work</p>
+          <p className="font-pen text-2xl text-teal">Canvas UGC</p>
           <h2 className="mt-2 font-display text-3xl tracking-tight text-navy md:text-4xl">
             Short-form that actually performs.
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
-            Recent content creation and Canvas UGC.
+            Talking videos and expression clips for Meta Canvas ads.
           </p>
         </div>
 
@@ -106,28 +106,17 @@ export function PortfolioPage() {
               <div className="mb-5 flex items-baseline gap-2">
                 <h3 className="text-xl font-semibold text-navy">{category.name}</h3>
               </div>
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-                {category.items.map((item) => (
-                  <article key={item.title} className="group cursor-pointer">
-                    <div
-                      className={`relative aspect-[9/16] overflow-hidden rounded-[22px] bg-gradient-to-br ${item.tone} transition duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_20px_40px_-24px_rgba(11,31,58,0.5)]`}
-                    >
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.16),transparent_45%)]" />
-                      <span className="absolute left-3 top-3 rounded-full bg-black/40 px-2 py-1 text-[10px] font-semibold tracking-wide text-white backdrop-blur">
-                        {item.platform}
-                      </span>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="inline-flex size-11 items-center justify-center rounded-full bg-white/90 text-navy transition group-hover:scale-110">
-                          <Play className="size-4 fill-current" />
-                        </span>
-                      </div>
-                    </div>
-                    <p className="mt-3 line-clamp-2 text-sm font-medium leading-snug text-navy">
-                      {item.title}
-                    </p>
-                  </article>
-                ))}
-              </div>
+              {category.items.length > 0 ? (
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+                  {category.items.map((item) => (
+                    <WorkVideoCard key={item.title} item={item} />
+                  ))}
+                </div>
+              ) : (
+                <p className="rounded-[22px] border border-dashed border-border bg-white/60 px-5 py-8 text-sm text-text-muted">
+                  Talking videos coming soon — drop clips in and we&apos;ll add them here.
+                </p>
+              )}
             </div>
           ))}
         </div>

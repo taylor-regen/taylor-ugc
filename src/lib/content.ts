@@ -6,57 +6,44 @@ export const navItems = [
 
 export const niches = ["Tech", "SaaS", "AI", "Software"] as const;
 
-export const workCategories = [
+export type WorkItem = {
+  title: string;
+  platform: string;
+  tone: string;
+  src?: string;
+};
+
+export type WorkCategory = {
+  name: string;
+  items: WorkItem[];
+};
+
+export const workCategories: WorkCategory[] = [
   {
-    name: "Content Creation",
-    count: 4,
+    name: "Canvas UGC talking video",
+    items: [],
+  },
+  {
+    name: "Canvas UGC expressions",
     items: [
       {
-        title: "Lorem ipsum product walkthrough",
-        platform: "TIKTOK",
+        title: "Spyglass",
+        platform: "CANVAS",
         tone: "from-navy to-navy-soft",
+        src: "/work/spyglass.mp4",
       },
       {
-        title: "Consectetur app onboarding hook",
-        platform: "REELS",
+        title: "Krea shocked",
+        platform: "CANVAS",
         tone: "from-teal to-teal-bright",
+        src: "/work/krea-shocked.mp4",
       },
       {
-        title: "Sed do eiusmod feature highlight",
-        platform: "SHORTS",
-        tone: "from-[#1e3a5f] to-teal",
-      },
-      {
-        title: "Ut labore lifestyle tech reel",
-        platform: "TIKTOK",
-        tone: "from-navy-soft to-[#0f766e]",
-      },
-    ],
-  },
-  {
-    name: "Canvas UGC",
-    count: 4,
-    items: [
-      {
-        title: "Magna aliqua canvas ad concept",
-        platform: "REELS",
+        title: "Vibiz",
+        platform: "CANVAS",
         tone: "from-[#0c4a6e] to-navy",
-      },
-      {
-        title: "Quis nostrud hook stack sample",
-        platform: "TIKTOK",
-        tone: "from-teal-bright to-navy-soft",
-      },
-      {
-        title: "Exercitation ullamco demo cut",
-        platform: "SHORTS",
-        tone: "from-navy to-[#134e4a]",
-      },
-      {
-        title: "Duis aute irure testimonial style",
-        platform: "YOUTUBE",
-        tone: "from-[#115e59] to-navy",
+        src: "/work/vibiz.mp4",
       },
     ],
   },
-] as const;
+];
