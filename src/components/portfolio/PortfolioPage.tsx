@@ -75,14 +75,30 @@ export function PortfolioPage() {
           <PenStar className="absolute -right-3 top-6 z-20 size-6 rotate-12 text-teal md:size-7" />
           <PenHeart className="absolute -left-2 bottom-16 z-20 size-5 -rotate-12 text-teal/80 md:size-6" />
 
-          <div
-            aria-hidden
-            className="absolute left-[2%] top-[10%] z-0 h-[78%] w-[58%] -rotate-[8deg] rounded-[28px] bg-gradient-to-br from-[#c5d0dc] to-[#9aadc0] shadow-[0_18px_40px_-20px_rgba(11,31,58,0.35)]"
-          />
-          <div
-            aria-hidden
-            className="absolute right-[2%] top-[10%] z-0 h-[78%] w-[58%] rotate-[8deg] rounded-[28px] bg-gradient-to-br from-navy-soft/80 to-teal/70 shadow-[0_18px_40px_-20px_rgba(11,31,58,0.4)]"
-          />
+          <div className="absolute left-[2%] top-[10%] z-0 h-[78%] w-[58%] -rotate-[8deg] overflow-hidden rounded-[28px] bg-navy shadow-[0_18px_40px_-20px_rgba(11,31,58,0.35)]">
+            <video
+              className="h-full w-full object-cover"
+              src="/work/krea-shocked.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden
+            />
+          </div>
+          <div className="absolute right-[2%] top-[10%] z-0 h-[78%] w-[58%] rotate-[8deg] overflow-hidden rounded-[28px] bg-navy shadow-[0_18px_40px_-20px_rgba(11,31,58,0.4)]">
+            <video
+              className="h-full w-full object-cover"
+              src="/work/gojiberry.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden
+            />
+          </div>
           <HeroCoverVideo />
         </div>
       </section>
