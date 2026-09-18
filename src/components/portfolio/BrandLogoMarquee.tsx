@@ -3,7 +3,6 @@ import Image from "next/image";
 const logos = [
   { name: "Spyglass", src: "/logos/spyglass.png", width: 120 },
   { name: "Krea", src: "/logos/krea.png", width: 96 },
-  { name: "Twisty", src: "/logos/twisty.png", width: 40 },
   { name: "Cantina", src: "/logos/cantina.png", width: 112 },
   { name: "Gojiberry", src: "/logos/gojiberry.png", width: 128 },
   { name: "Playad", src: "/logos/playad.png", width: 108 },
