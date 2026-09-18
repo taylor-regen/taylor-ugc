@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState, type MouseEvent } from "react";
 import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 import type { WorkItem } from "@/lib/content";
@@ -62,6 +63,19 @@ export function WorkVideoCard({ item }: { item: WorkItem }) {
           >
             {muted ? <VolumeX className="size-4" /> : <Volume2 className="size-4" />}
           </button>
+        )}
+
+        {item.logo && (
+          <div className="pointer-events-none absolute bottom-3 left-3 z-20 max-w-[42%] opacity-0 transition duration-300 group-hover:opacity-100">
+            <Image
+              src={item.logo}
+              alt={item.title}
+              width={120}
+              height={28}
+              className="h-3.5 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] sm:h-4"
+              unoptimized
+            />
+          </div>
         )}
 
         <button

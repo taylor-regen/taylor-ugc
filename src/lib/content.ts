@@ -11,6 +11,8 @@ export type WorkItem = {
   platform: string;
   tone: string;
   src?: string;
+  /** Black transparent PNG shown white on video hover */
+  logo?: string;
 };
 
 export type WorkCategory = {
@@ -27,18 +29,21 @@ export const workCategories: WorkCategory[] = [
         platform: "CANVAS",
         tone: "from-navy via-navy-soft to-teal",
         src: "/work/playad.mp4",
+        logo: "/logos/playad.png",
       },
       {
         title: "Gojiberry",
         platform: "CANVAS",
         tone: "from-teal to-navy-soft",
         src: "/work/gojiberry.mp4",
+        logo: "/logos/gojiberry.png",
       },
       {
         title: "Cantina",
         platform: "CANVAS",
         tone: "from-[#115e59] to-navy",
         src: "/work/cantina.mp4",
+        logo: "/logos/cantina.png",
       },
     ],
   },
@@ -50,12 +55,14 @@ export const workCategories: WorkCategory[] = [
         platform: "CANVAS",
         tone: "from-navy to-navy-soft",
         src: "/work/spyglass.mp4",
+        logo: "/logos/spyglass.png",
       },
       {
         title: "Krea shocked",
         platform: "CANVAS",
         tone: "from-teal to-teal-bright",
         src: "/work/krea-shocked.mp4",
+        logo: "/logos/krea.png",
       },
       {
         title: "Vibiz",
