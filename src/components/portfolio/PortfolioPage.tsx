@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { niches, workCategories } from "@/lib/content";
+import { niches, workItems } from "@/lib/content";
 import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
 import { WorkVideoCard } from "@/components/portfolio/WorkVideoCard";
 import { BrandLogoMarquee } from "@/components/portfolio/BrandLogoMarquee";
@@ -118,30 +118,9 @@ export function PortfolioPage() {
           <BrandLogoMarquee />
         </div>
 
-        <div className="flex flex-col gap-14">
-          {workCategories.map((category) => (
-            <div key={category.name}>
-              <div className="mb-5 flex items-baseline gap-2">
-                <h3 className="text-xl font-semibold text-navy">{category.name}</h3>
-              </div>
-              {category.items.length > 0 ? (
-                <div
-                  className={
-                    category.items.length < 4
-                      ? "mx-auto grid w-full max-w-3xl grid-cols-2 justify-center gap-3 sm:gap-4 md:grid-cols-3"
-                      : "grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
-                  }
-                >
-                  {category.items.map((item) => (
-                    <WorkVideoCard key={item.title} item={item} />
-                  ))}
-                </div>
-              ) : (
-                <p className="rounded-[22px] border border-dashed border-border bg-white/60 px-5 py-8 text-sm text-text-muted">
-                  Talking videos coming soon — drop clips in and we&apos;ll add them here.
-                </p>
-              )}
-            </div>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+          {workItems.map((item) => (
+            <WorkVideoCard key={item.title} item={item} />
           ))}
         </div>
       </section>
