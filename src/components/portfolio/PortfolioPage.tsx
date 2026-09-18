@@ -25,7 +25,7 @@ export function PortfolioPage() {
         <PenHeart className="absolute bottom-24 left-[46%] hidden size-6 text-teal/60 md:block" />
 
         <div>
-          <p className="font-pen text-2xl text-teal md:text-[1.7rem]">UGC creator</p>
+          <p className="font-pen text-2xl text-teal md:text-[1.7rem]">Canvas UGC creator</p>
           <h1 className="mt-3 max-w-xl font-display text-4xl leading-[1.05] tracking-tight text-navy md:text-5xl lg:text-[3.25rem]">
             I help tech and app brands convert viewers into users.
           </h1>
