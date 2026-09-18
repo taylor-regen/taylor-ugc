@@ -7,6 +7,7 @@ const logos = [
   { name: "Cantina", src: "/logos/cantina.png", width: 112 },
   { name: "Gojiberry", src: "/logos/gojiberry.png", width: 128 },
   { name: "Playad", src: "/logos/playad.png", width: 108 },
+  { name: "Vibiz", src: "/logos/vibiz.png", width: 112 },
 ] as const;
 
 function LogoSet({ suffix }: { suffix: string }) {

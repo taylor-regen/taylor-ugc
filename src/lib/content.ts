@@ -69,6 +69,7 @@ export const workCategories: WorkCategory[] = [
         platform: "CANVAS",
         tone: "from-[#0c4a6e] to-navy",
         src: "/work/vibiz.mp4",
+        logo: "/logos/vibiz.png",
       },
     ],
   },
