@@ -28,6 +28,12 @@ export const workCategories: WorkCategory[] = [
         tone: "from-navy via-navy-soft to-teal",
         src: "/work/playad.mp4",
       },
+      {
+        title: "Gojiberry",
+        platform: "CANVAS",
+        tone: "from-teal to-navy-soft",
+        src: "/work/gojiberry.mp4",
+      },
     ],
   },
   {
