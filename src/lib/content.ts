@@ -37,14 +37,14 @@ export const editingStyleItems: WorkItem[] = [
     title: "Direct Response",
     caption: "Strong hooks, clear product benefits, engaging visuals and persuasive messaging.",
     tone: "from-[#d4d8de] to-[#b8c0ca]",
-    // src: "/work/polarsteps-direct-response.mp4",
+    src: "/work/polarsteps-direct-response.mp4",
     logo: "/logos/polarsteps.svg",
   },
   {
     title: "Talking to Camera",
     caption: "Natural delivery, personality, relatable opinions and conversational content.",
     tone: "from-[#d4d8de] to-[#b8c0ca]",
-    // src: "/work/polarsteps-talking-to-camera.mp4",
+    src: "/work/polarsteps-talking-to-camera.mp4",
     logo: "/logos/polarsteps.svg",
   },
 ];
