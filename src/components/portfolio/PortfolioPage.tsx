@@ -135,7 +135,7 @@ export function PortfolioPage() {
 
           <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
             {editingStyleItems.map((item) => (
-              <ShowcaseVideoCard key={item.title} item={item} showTitleBelow />
+              <ShowcaseVideoCard key={item.title} item={item} showTitleAbove />
             ))}
           </div>
         </section>
@@ -159,7 +159,7 @@ export function PortfolioPage() {
                 key={`${item.caption}-${item.title}`}
                 item={item}
                 showLogoAbove
-                showTitleBelow
+                showTitleAbove
               />
             ))}
           </div>

@@ -45,7 +45,7 @@ export function CanvasScrollGallery({ items }: { items: WorkItem[] }) {
             key={item.title}
             className="w-[42%] shrink-0 snap-start sm:w-[30%] lg:w-[23%]"
           >
-            <ShowcaseVideoCard item={item} showTitleBelow showLogoAbove={false} />
+            <ShowcaseVideoCard item={item} showLogoAbove />
           </div>
         ))}
       </div>

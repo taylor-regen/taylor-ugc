@@ -7,16 +7,16 @@ import type { WorkItem } from "@/lib/content";
 
 type ShowcaseVideoCardProps = {
   item: WorkItem;
-  /** Brand logo above the card (SaaS section) */
+  /** Brand logo above the card */
   showLogoAbove?: boolean;
-  /** Style / format title under the card */
-  showTitleBelow?: boolean;
+  /** Style / format title above the card */
+  showTitleAbove?: boolean;
 };
 
 export function ShowcaseVideoCard({
   item,
   showLogoAbove = false,
-  showTitleBelow = true,
+  showTitleAbove = false,
 }: ShowcaseVideoCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
@@ -46,16 +46,21 @@ export function ShowcaseVideoCard({
 
   return (
     <article className="group flex w-full min-w-0 flex-col">
-      {showLogoAbove && item.logo && (
-        <div className="mb-3 flex h-7 items-center">
-          <Image
-            src={item.logo}
-            alt={item.caption || item.title}
-            width={120}
-            height={28}
-            className="h-5 w-auto max-w-[70%] object-contain object-left opacity-80"
-            unoptimized
-          />
+      {(showLogoAbove || showTitleAbove) && (
+        <div className="mb-3 flex min-h-7 flex-col justify-end gap-1 px-0.5">
+          {showLogoAbove && item.logo && (
+            <Image
+              src={item.logo}
+              alt={item.caption || item.title}
+              width={120}
+              height={28}
+              className="h-5 w-auto max-w-[75%] object-contain object-left"
+              unoptimized
+            />
+          )}
+          {showTitleAbove && (
+            <p className="text-sm font-semibold tracking-tight text-navy">{item.title}</p>
+          )}
         </div>
       )}
 
@@ -95,19 +100,6 @@ export function ShowcaseVideoCard({
           </button>
         )}
 
-        {!showLogoAbove && item.logo && hasVideo && (
-          <div className="pointer-events-none absolute bottom-3 left-3 z-20 max-w-[42%] opacity-0 transition duration-300 group-hover:opacity-100">
-            <Image
-              src={item.logo}
-              alt={item.title}
-              width={120}
-              height={28}
-              className="h-3.5 w-auto object-contain brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] sm:h-4"
-              unoptimized
-            />
-          </div>
-        )}
-
         <button
           type="button"
           onClick={togglePlay}
@@ -133,15 +125,6 @@ export function ShowcaseVideoCard({
           )}
         </button>
       </div>
-
-      {showTitleBelow && (
-        <div className="mt-3 px-0.5">
-          <p className="text-sm font-semibold tracking-tight text-navy">{item.title}</p>
-          {item.caption && !showLogoAbove && (
-            <p className="mt-1 text-xs leading-snug text-text-muted">{item.caption}</p>
-          )}
-        </div>
-      )}
     </article>
   );
 }
