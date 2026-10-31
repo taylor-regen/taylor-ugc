@@ -1,10 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { niches, workItems } from "@/lib/content";
+import {
+  canvasItems,
+  editingStyleItems,
+  niches,
+  ugcContentItems,
+} from "@/lib/content";
 import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
-import { WorkVideoCard } from "@/components/portfolio/WorkVideoCard";
-import { BrandLogoMarquee } from "@/components/portfolio/BrandLogoMarquee";
+import { ShowcaseVideoCard } from "@/components/portfolio/ShowcaseVideoCard";
+import { CanvasScrollGallery } from "@/components/portfolio/CanvasScrollGallery";
 import {
   PenArrow,
   PenEnvelope,
@@ -103,27 +108,81 @@ export function PortfolioPage() {
         </div>
       </section>
 
-      {/* Work */}
-      <section id="work" className="scroll-mt-28 pb-20 md:pb-28">
-        <div className="relative mb-12 text-center">
-          <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />
-          <PenHeart className="absolute right-[20%] top-2 size-5 text-teal/50" />
-          <p className="font-pen text-2xl text-teal">Canvas UGC</p>
-          <h2 className="mt-2 font-display text-3xl tracking-tight text-navy md:text-4xl">
-            Short-form that actually performs.
-          </h2>
-          <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
-            Talking videos and expression clips for Meta Canvas ads.
-          </p>
-          <BrandLogoMarquee />
-        </div>
+      {/* Work showcases */}
+      <div id="work" className="scroll-mt-28">
+        {/* Section 1 — Editing styles (Polarsteps) */}
+        <section className="pb-16 md:pb-24">
+          <div className="relative mb-8 text-center md:mb-10">
+            <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />
+            <PenHeart className="absolute right-[20%] top-2 size-5 text-teal/50" />
+            <h2 className="font-display text-3xl tracking-tight text-navy md:text-4xl">
+              Editing Styles I Can Create
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
+              Explore the different ways I can bring ideas to life...
+            </p>
+            <div className="mt-5 flex justify-center">
+              <Image
+                src="/logos/polarsteps.svg"
+                alt="Polarsteps"
+                width={180}
+                height={34}
+                className="h-7 w-auto object-contain opacity-80 md:h-8"
+                unoptimized
+              />
+            </div>
+          </div>
 
-        <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-          {workItems.map((item) => (
-            <WorkVideoCard key={item.title} item={item} />
-          ))}
-        </div>
-      </section>
+          <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {editingStyleItems.map((item) => (
+              <ShowcaseVideoCard key={item.title} item={item} showTitleBelow />
+            ))}
+          </div>
+        </section>
+
+        {/* Section 2 — SaaS, apps & tech UGC */}
+        <section className="pb-16 md:pb-24">
+          <div className="relative mb-8 text-center md:mb-10">
+            <PenStar className="absolute left-[14%] top-1 size-5 text-teal/45" />
+            <PenHeart className="absolute right-[16%] top-0 size-5 text-teal/45" />
+            <h2 className="font-display text-3xl tracking-tight text-navy md:text-4xl">
+              UGC Content
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
+              A selection of UGC content for the apps and tools.
+            </p>
+          </div>
+
+          <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {ugcContentItems.map((item) => (
+              <ShowcaseVideoCard
+                key={`${item.caption}-${item.title}`}
+                item={item}
+                showLogoAbove
+                showTitleBelow
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Section 3 — Canvas UGC gallery */}
+        <section className="pb-20 md:pb-28">
+          <div className="relative mb-6 text-center md:mb-8">
+            <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />
+            <PenHeart className="absolute right-[20%] top-2 size-5 text-teal/50" />
+            <h2 className="font-display text-3xl tracking-tight text-navy md:text-4xl">
+              Canvas UGC
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
+              Talking videos and expression clips for Meta Canvas ads.
+            </p>
+          </div>
+
+          <div className="mx-auto w-[92%] md:w-[90%]">
+            <CanvasScrollGallery items={canvasItems} />
+          </div>
+        </section>
+      </div>
 
       {/* About */}
       <section id="about" className="scroll-mt-28 pb-20 md:pb-28">
