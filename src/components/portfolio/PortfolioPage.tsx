@@ -133,7 +133,7 @@ export function PortfolioPage() {
             </div>
           </div>
 
-          <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {editingStyleItems.map((item) => (
               <ShowcaseVideoCard key={item.title} item={item} showTitleAbove />
             ))}

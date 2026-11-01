@@ -17,20 +17,13 @@ export type WorkItem = {
   caption?: string;
 };
 
-/** Section 1 — Polarsteps editing styles (placeholders until final files land) */
+/** Section 1 — Polarsteps editing styles */
 export const editingStyleItems: WorkItem[] = [
   {
     title: "Creative Edits",
     caption: "Creative editing, playful transitions with dynamic pacing and animations.",
     tone: "from-[#d4d8de] to-[#b8c0ca]",
-    // src: "/work/polarsteps-creative-edits.mp4",
-    logo: "/logos/polarsteps.svg",
-  },
-  {
-    title: "Storytelling",
-    caption: "Cinematic B-roll, emotional storytelling and narrative-led editing.",
-    tone: "from-[#d4d8de] to-[#b8c0ca]",
-    // src: "/work/polarsteps-storytelling.mp4",
+    src: "/work/polarsteps-creative-edits.mp4",
     logo: "/logos/polarsteps.svg",
   },
   {
