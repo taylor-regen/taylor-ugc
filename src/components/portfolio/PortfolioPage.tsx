@@ -5,7 +5,6 @@ import {
   canvasItems,
   editingStyleItems,
   niches,
-  ugcContentItems,
 } from "@/lib/content";
 import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
 import { ShowcaseVideoCard } from "@/components/portfolio/ShowcaseVideoCard";
@@ -140,32 +139,7 @@ export function PortfolioPage() {
           </div>
         </section>
 
-        {/* Section 2 — SaaS, apps & tech UGC */}
-        <section className="pb-16 md:pb-24">
-          <div className="relative mb-8 text-center md:mb-10">
-            <PenStar className="absolute left-[14%] top-1 size-5 text-teal/45" />
-            <PenHeart className="absolute right-[16%] top-0 size-5 text-teal/45" />
-            <h2 className="font-display text-3xl tracking-tight text-navy md:text-4xl">
-              UGC Content
-            </h2>
-            <p className="mx-auto mt-3 max-w-lg text-sm text-text-muted md:text-base">
-              A selection of UGC content for the apps and tools.
-            </p>
-          </div>
-
-          <div className="mx-auto grid w-[85%] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            {ugcContentItems.map((item) => (
-              <ShowcaseVideoCard
-                key={`${item.caption}-${item.title}`}
-                item={item}
-                showLogoAbove
-                showTitleAbove
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* Section 3 — Canvas UGC gallery */}
+        {/* Canvas UGC gallery */}
         <section className="pb-20 md:pb-28">
           <div className="relative mb-6 text-center md:mb-8">
             <PenStar className="absolute left-[18%] top-0 size-5 text-teal/50" />

@@ -42,39 +42,7 @@ export const editingStyleItems: WorkItem[] = [
   },
 ];
 
-/** Section 2 — SaaS / apps / tech UGC examples (placeholders) */
-export const ugcContentItems: WorkItem[] = [
-  {
-    title: "Two-Person Skit",
-    caption: "ClickUp",
-    tone: "from-[#d4d8de] to-[#b8c0ca]",
-    logo: "/logos/clickup.svg",
-    // src: "/work/clickup-two-person-skit.mp4",
-  },
-  {
-    title: "Talking Head",
-    caption: "Preply",
-    tone: "from-[#d4d8de] to-[#b8c0ca]",
-    logo: "/logos/preply.svg",
-    // src: "/work/preply-talking-head.mp4",
-  },
-  {
-    title: "Lifestyle & Voiceover",
-    caption: "Wispr Flow",
-    tone: "from-[#d4d8de] to-[#b8c0ca]",
-    logo: "/logos/wispr-flow.svg",
-    // src: "/work/wispr-flow-lifestyle-voiceover.mp4",
-  },
-  {
-    title: "AI Conversation",
-    caption: "Tolan",
-    tone: "from-[#d4d8de] to-[#b8c0ca]",
-    logo: "/logos/tolan.svg",
-    // src: "/work/tolan-ai-conversation.mp4",
-  },
-];
-
-/** Section 3 — Canvas UGC gallery (existing assets; order = showcase priority) */
+/** Canvas UGC gallery (existing assets; order = showcase priority) */
 export const canvasItems: WorkItem[] = [
   {
     title: "Gojiberry",
