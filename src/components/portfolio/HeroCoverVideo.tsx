@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { Play } from "lucide-react";
+import { withBasePath } from "@/lib/paths";
 
 export function HeroCoverVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -24,7 +25,7 @@ export function HeroCoverVideo() {
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/ugc-cover.mp4"
+        src={withBasePath("/ugc-cover.mp4")}
         autoPlay
         muted
         loop

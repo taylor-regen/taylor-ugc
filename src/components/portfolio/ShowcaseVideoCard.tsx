@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef, useState, type MouseEvent } from "react";
 import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 import type { WorkItem } from "@/lib/content";
+import { withBasePath } from "@/lib/paths";
 
 type ShowcaseVideoCardProps = {
   item: WorkItem;
@@ -50,7 +51,7 @@ export function ShowcaseVideoCard({
         <div className="mb-3 flex min-h-7 flex-col justify-end gap-1 px-0.5">
           {showLogoAbove && item.logo && (
             <Image
-              src={item.logo}
+              src={withBasePath(item.logo)}
               alt={item.caption || item.title}
               width={120}
               height={28}
@@ -75,7 +76,7 @@ export function ShowcaseVideoCard({
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
-            src={item.src}
+            src={withBasePath(item.src!)}
             muted={muted}
             loop
             playsInline

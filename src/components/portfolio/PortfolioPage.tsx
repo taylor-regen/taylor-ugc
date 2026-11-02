@@ -6,6 +6,7 @@ import {
   editingStyleItems,
   niches,
 } from "@/lib/content";
+import { withBasePath } from "@/lib/paths";
 import { HeroCoverVideo } from "@/components/portfolio/HeroCoverVideo";
 import { ShowcaseVideoCard } from "@/components/portfolio/ShowcaseVideoCard";
 import { CanvasScrollGallery } from "@/components/portfolio/CanvasScrollGallery";
@@ -82,7 +83,7 @@ export function PortfolioPage() {
           <div className="absolute left-[2%] top-[10%] z-0 h-[78%] w-[58%] -rotate-[8deg] overflow-hidden rounded-[28px] bg-navy shadow-[0_18px_40px_-20px_rgba(11,31,58,0.35)]">
             <video
               className="h-full w-full object-cover"
-              src="/work/krea-shocked.mp4"
+              src={withBasePath("/work/krea-shocked.mp4")}
               autoPlay
               muted
               loop
@@ -94,7 +95,7 @@ export function PortfolioPage() {
           <div className="absolute right-[2%] top-[10%] z-0 h-[78%] w-[58%] rotate-[8deg] overflow-hidden rounded-[28px] bg-navy shadow-[0_18px_40px_-20px_rgba(11,31,58,0.4)]">
             <video
               className="h-full w-full object-cover"
-              src="/work/gojiberry.mp4"
+              src={withBasePath("/work/gojiberry.mp4")}
               autoPlay
               muted
               loop
@@ -122,7 +123,7 @@ export function PortfolioPage() {
             </p>
             <div className="mt-5 flex justify-center">
               <Image
-                src="/logos/polarsteps.svg"
+                src={withBasePath("/logos/polarsteps.svg")}
                 alt="Polarsteps"
                 width={180}
                 height={34}
@@ -174,7 +175,7 @@ export function PortfolioPage() {
               <div className="relative">
                 <div className="relative h-64 w-48 -rotate-2 overflow-hidden rounded-sm shadow-[0_12px_30px_-16px_rgba(11,31,58,0.45)] ring-1 ring-black/5 md:h-72 md:w-56">
                   <Image
-                    src="/taylor-about.jpg"
+                    src={withBasePath("/taylor-about.jpg")}
                     alt="Taylor Ashley"
                     fill
                     className="object-cover object-[50%_20%]"
